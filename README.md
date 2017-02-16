@@ -61,20 +61,27 @@ Once connected to your Raspberry Pi you need to start installing the necessary l
     
   If you get an error about libjpeg-dev try installing this first:
     * `sudo apt-get install libjpeg-dev`
+    
   b. We need to install some packages that allow OpenCV to process videos:
     * `sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev`
+    
   c. We need to install the GTK library for some GUI stuff like viewing images.
     * `sudo apt-get install libgtk2.0-dev`
+    
   d. We need to install some other packages for various operations in OpenCV:
     * `sudo apt-get install libatlas-base-dev gfortran`
+    
   e. We need to install pip if you haven't done so in the past:
     * `wget https://bootstrap.pypa.io/get-pip.py`
     * `sudo python get-pip.py`
+    
   f. Now we can install NumPy - a python library for maths stuff - needed for maths stuff.
     * `sudo pip install numpy`
+    
   g. Download and install the file from this repo called "latest-OpenCV.deb".
     * `wget "https://github.com/jabelone/OpenCV-for-Pi/raw/master/latest-OpenCV.deb"`
     * `sudo dpkg -i latest-OpenCV.deb`
+    
   h. Test it installed correctly by doing the following: Open a python shell
     * `python`
     * Run the following commands, it should return the same version you installed.

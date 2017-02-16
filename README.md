@@ -88,5 +88,6 @@ Once connected to your Raspberry Pi you need to start installing the necessary l
     cd && cd 'path_to_repository'
     make
     ```
+    
   * You should get something along the lines of this if it makes successfully
     * `gcc -o qlight qlight.c -Wall -L/lib/i386-linux-gnu/ -L/usr/lib/i386-linux-gnu/ -lusb-1.0`

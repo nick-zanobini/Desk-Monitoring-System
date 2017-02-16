@@ -37,18 +37,20 @@ Once connected to your Raspberry Pi you need to start installing the necessary l
   * Plug in both USB ports to the Raspberry Pi. Navigate to the QLight folder
     * `cd qlight_userspace`
   * Turn on and off the Red Light on the Q light
-    * sudo ./qlight -r on
+    * `sudo ./qlight -r on`
       * You should get the following output.
-          ```Q-light detected
-             Claimed interface
-             Released interface```
-    * sudo ./qlight -r off
+          ```
+          Q-light detected
+          Claimed interface
+          Released interface
+          ```
+    * `sudo ./qlight -r off`
       * You should get the following output.
-        ```
-        Q-light detected
-        Claimed interface
-        Released interface
-        ```
+          ```
+          Q-light detected
+          Claimed interface
+          Released interface
+          ```
 
 4. Install OpenCV 3
   a. We need to install some packages that allow OpenCV to process images:

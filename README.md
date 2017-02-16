@@ -1,4 +1,4 @@
-#Creating a desk monitoring system.
+#Creating a Desk Monitoring System.
 
 Components:
   * Raspberry Pi 3

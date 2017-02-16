@@ -8,6 +8,7 @@ Components:
   * QLight ST-USB Series Signal Tower
   * Raspberry Pi and PiCamera Case
 
+Here's what you need to do to get started:
 - Flash latest version of Raspian Jesse on to SD Card
 - Connect PiCamera to Raspberry Pi (Silver connectors facing the HDMI port)
 - Install your case on both your Raspberry Pi and PiCamera

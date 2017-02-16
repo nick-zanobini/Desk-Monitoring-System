@@ -7,16 +7,9 @@ import datetime
 import imutils
 import time
 import cv2
-import os
 
 # filter warnings
 warnings.filterwarnings("ignore")
-path = dir_path = os.path.dirname(os.path.realpath(__file__))
-qlight_path = os.path.join(path, 'qlight')
-green_on = 'sudo ' + qlight_path + ' -g on'
-green_off = 'sudo ' + qlight_path + ' -g off'
-red_on = 'sudo ' + qlight_path + ' -r on'
-red_off = 'sudo ' + qlight_path + ' -r off'
 
 # initialize the camera and grab a reference to the raw camera capture
 camera = PiCamera()
@@ -87,15 +80,16 @@ try:
         cv2.putText(frame, ts, (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX,
                     0.35, (0, 0, 255), 1)
 
-        # # display the security feed
-        # cv2.imshow("Security Feed", frame)
-        # key = cv2.waitKey(1) & 0xFF
+        # display the security feed
+        cv2.imshow("Security Feed", frame)
+        key = cv2.waitKey(1) & 0xFF
 
-        # # if the `q` key is pressed, break from the lop
-        # if key == ord("q"):
-        #     s = commands.getstatusoutput('sudo ./qlight -g off')
-        #     s = commands.getstatusoutput('sudo ./qlight -r off')
-        #     break
+        # if the `q` key is pressed, break from the lop
+        if key == ord("q"):
+            s = commands.getstatusoutput('sudo ./qlight -g off')
+            s = commands.getstatusoutput('sudo ./qlight -r off')
+            break
+
         count += 1
         now = time.time()
         if count >= 100:
@@ -108,17 +102,17 @@ try:
             rawCapture.truncate(0)
 
         if lastMotionTime is not None and (now - lastMotionTime) < (stillTime) and text == "Occupied":
-            s = commands.getstatusoutput(red_off)
-            s = commands.getstatusoutput(green_on)
+            s = commands.getstatusoutput('sudo ./qlight -r off')
+            s = commands.getstatusoutput('sudo ./qlight -g on')
         elif lastMotionTime is not None and (now - lastMotionTime) > (stillTime) and text == "Unoccupied":
-            s = commands.getstatusoutput(green_off)
-            s = commands.getstatusoutput(red_on)
+            s = commands.getstatusoutput('sudo ./qlight -g off')
+            s = commands.getstatusoutput('sudo ./qlight -r on')
 
         # clear the stream in preparation for the next frame
         rawCapture.truncate(0)
 
 except(KeyboardInterrupt, SystemExit):
-    s = commands.getstatusoutput(green_off)
-    s = commands.getstatusoutput(red_off)
+    s = commands.getstatusoutput('sudo ./qlight -g off')
+    s = commands.getstatusoutput('sudo ./qlight -r off')
     # clear the stream in preparation for the next frame
     rawCapture.truncate(0)

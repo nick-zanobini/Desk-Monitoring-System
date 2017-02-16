@@ -39,12 +39,12 @@ Once connected to your Raspberry Pi you need to start installing the necessary l
   * Turn on and off the Red Light on the Q light
     * sudo ./qlight -r on
       * You should get the following output.
-        * ```Q-light detected
+          ```Q-light detected
              Claimed interface
              Released interface```
     * sudo ./qlight -r off
       * You should get the following output.
-        * ```Q-light detected
+          ```Q-light detected
              Claimed interface
              Released interface```
 
@@ -70,7 +70,7 @@ Once connected to your Raspberry Pi you need to start installing the necessary l
   h. Test it installed correctly by doing the following: Open a python shell
     * `python`
     * Run the following commands, it should return the same version you installed.
-      * ```import cv2
+      ```import cv2
       cv2.__version__```
 
 4.  

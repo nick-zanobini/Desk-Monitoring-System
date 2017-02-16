@@ -55,8 +55,10 @@ Once connected to your Raspberry Pi you need to start installing the necessary l
           ```
 
 4. Install OpenCV 3
+
   a. We need to install some packages that allow OpenCV to process images:
     * `sudo apt-get install libtiff5-dev libjasper-dev libpng12-dev`
+    
   If you get an error about libjpeg-dev try installing this first:
     * `sudo apt-get install libjpeg-dev`
   b. We need to install some packages that allow OpenCV to process videos:
@@ -85,9 +87,11 @@ Once connected to your Raspberry Pi you need to start installing the necessary l
 5. When you clone the repository you need to remake the qlight app in the repo folder.
 
   * ```
-    cd && cd 'path_to_repository'
+    cd && cd path_to_repository
     make
     ```
     
   * You should get something along the lines of this if it makes successfully
+  
       * `gcc -o qlight qlight.c -Wall -L/lib/i386-linux-gnu/ -L/usr/lib/i386-linux-gnu/ -lusb-1.0`
+      

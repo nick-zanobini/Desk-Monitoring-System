@@ -3,7 +3,7 @@
 Components:
   * Raspberry Pi 3
   * 8GB MicroSD Card
-  * 5V 2.1A Switching Power Supply
+  * 5V 2.1A Power Supply
   * Raspberry Pi Camera
   * QLight ST-USB Series Signal Tower
   * Raspberry Pi and PiCamera Case

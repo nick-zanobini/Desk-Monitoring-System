@@ -1,4 +1,4 @@
-#Creating a Desk Monitoring System.
+# Creating a Desk Monitoring System.
 
 Components:
   * Raspberry Pi 3
@@ -16,7 +16,7 @@ Here's what you need to do to get started:
 - Plug in your Raspberry Pi and connect it to the internet
 
 You can work on your Raspberry Pi as a computer (with a mouse, keyboard and monitor connected) or as I prefer SSH into your RPi from your computer. I use X11 forwarding so I can see the video stream of the PiCamera. To SSH with X11 forwarding the following and replace 192.168.0.XX with the IP address of your Raspberry Pi.:
-  * `ssh -X pi@192.168.0.XX`
+  * `ssh -Y pi@192.168.0.XX`
 
 Once connected to your Raspberry Pi you need to start installing the necessary libraries.
 
